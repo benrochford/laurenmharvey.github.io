@@ -1,7 +1,6 @@
 name: Build and deploy site
 on:
   push:
-    branches: [main]
   pull_request:
   workflow_dispatch:
 permissions:
@@ -20,7 +19,7 @@ jobs:
           JEKYLL_ENV: production
       - uses: actions/upload-pages-artifact@v3
   deploy:
-    if: github.event_name != 'pull_request' && github.repository == 'laurenmharvey/laurenmharvey.github.io'
+    if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main' && github.repository == 'laurenmharvey/laurenmharvey.github.io'
     needs: build
     runs-on: ubuntu-latest
     permissions:
