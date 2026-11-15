@@ -6,7 +6,7 @@ A two-page [Academic Pages](https://github.com/academicpages/academicpages.githu
 
 | What to change | File |
 | --- | --- |
-| Short bio, research interests, education | `_pages/about.md` |
+| Short bio and research interests | `_pages/about.md` |
 | Name, affiliation, email, ORCID | `_config.yml` |
 | Headshot | `images/lauren-harvey.png` |
 | CV (replace the PDF using the same filename) | `files/lauren-harvey-cv.pdf` |

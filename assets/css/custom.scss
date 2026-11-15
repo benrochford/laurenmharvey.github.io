@@ -30,3 +30,14 @@ html[data-theme="dark"] {
 :root { --global-link-color: #256778; --global-link-color-hover: #194a58; --global-link-color-visited: #405f7b; }
 .masthead #theme-toggle button { color: #f3f7f7; }
 .page__footer { color: var(--global-text-color); }
+
+/* Keep contact links available on mobile without the theme’s Follow dropdown. */
+@media (max-width: 924px) {
+  .author__urls-wrapper { display: block; cursor: default; }
+  .author__urls {
+    display: flex; position: static; flex-wrap: wrap; gap: 0 16px;
+    margin: 12px 0 0; padding: 0; border: 0; box-shadow: none;
+    background: transparent; z-index: auto;
+  }
+  .author__urls::before, .author__urls::after { display: none; }
+}
